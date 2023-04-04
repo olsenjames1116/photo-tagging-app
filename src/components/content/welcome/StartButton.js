@@ -6,9 +6,9 @@ export default function StartButton() {
   const dispatch = useDispatch();
   const welcome = useSelector((state) => state.welcome.value);
 
-  useEffect(() => {
-    console.log(welcome);
-  }, [welcome]);
+  //   useEffect(() => {
+  //     console.log(welcome);
+  //   }, [welcome]);
 
   return (
     <button type="button" onClick={() => dispatch(playGame())}>
