@@ -6,11 +6,10 @@ export const welcomeSlice = createSlice({
     value: true
   },
   reducers: {
-    welcome: (state) => state,
-    play: (state) => !state
+    welcomeUser: (state) => state.value,
+    playGame: (state) => !state.value
   }
 });
 
-export const { welcome, play } = welcomeSlice.actions;
-
+export const { welcomeUser, playGame } = welcomeSlice.actions;
 export default welcomeSlice.reducer;

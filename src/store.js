@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import welcomeReducer from './features/welcome/welcomeSlice';
+import welcomeReducer from './redux/welcome/welcomeSlice';
+import charactersReducer from './redux/characters/charactersSlice';
 
 export default configureStore({
   reducer: {
-    welcome: welcomeReducer
+    welcome: welcomeReducer,
+    characters: charactersReducer
   }
 });
