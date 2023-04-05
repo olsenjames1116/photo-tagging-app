@@ -7,6 +7,9 @@ export default function Game() {
   };
 
   function createTargetBox(x, y) {
+    const currentTargetBox = document.querySelector('div.targetBox');
+    currentTargetBox && currentTargetBox.remove();
+
     const targetBox = document.createElement('div');
     targetBox.classList.add('targetBox');
 
