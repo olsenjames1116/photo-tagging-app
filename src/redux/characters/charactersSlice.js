@@ -27,7 +27,13 @@ export const charactersSlice = createSlice({
     ]
   },
   reducers: {
-    foundCharacter: (state, action) => {}
+    foundCharacter: (state, action) => {
+      const index = state.value.findIndex(
+        (character) => character.name.toLowerCase() === action.payload
+      );
+
+      state.value[index] = { ...state.value[index], active: false };
+    }
   }
 });
 

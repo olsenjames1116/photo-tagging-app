@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setTargetCharacters } from '../../../redux/targetCharacters/targetCharactersSlice';
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../../firebase';
+import { foundCharacter } from '../../../redux/characters/charactersSlice';
 
 export default function TargetList() {
   const characters = useSelector((state) => state.characters.value);
@@ -35,7 +36,6 @@ export default function TargetList() {
 
     const validXCoordinates = [correctCoordinates[0] - 50, correctCoordinates[0] + 50];
     const validYCoordinates = [correctCoordinates[1] - 50, correctCoordinates[1] + 50];
-    console.log(validXCoordinates, validYCoordinates);
 
     if (
       x > validXCoordinates[0] &&
@@ -43,7 +43,7 @@ export default function TargetList() {
       y > validYCoordinates[0] &&
       y < validYCoordinates[1]
     ) {
-      console.log('valid');
+      dispatch(foundCharacter(characterName));
     }
   }
 
