@@ -5,6 +5,7 @@ import gameReducer from './redux/game/gameSlice';
 import imageClickedReducer from './redux/imageClicked/imageClickedSlice';
 import targetCoordinatesReducer from './redux/targetCoordinates/targetCoordinatesSlice';
 import targetCharactersReducer from './redux/targetCharacters/targetCharactersSlice';
+import exitReducer from './redux/exit/exitSlice';
 
 export default configureStore({
   reducer: {
@@ -13,6 +14,7 @@ export default configureStore({
     game: gameReducer,
     imageClicked: imageClickedReducer,
     targetCoordinates: targetCoordinatesReducer,
-    targetCharacters: targetCharactersReducer
+    targetCharacters: targetCharactersReducer,
+    exit: exitReducer
   }
 });

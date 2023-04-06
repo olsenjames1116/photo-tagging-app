@@ -15,5 +15,5 @@ export const gameSlice = createSlice({
   }
 });
 
-export const { loadGame } = gameSlice.actions;
+export const { loadGame, endGame } = gameSlice.actions;
 export default gameSlice.reducer;

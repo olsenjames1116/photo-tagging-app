@@ -4,6 +4,8 @@ import { setTargetCharacters } from '../../../redux/targetCharacters/targetChara
 import { doc, getDoc } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { foundCharacter } from '../../../redux/characters/charactersSlice';
+import { exitGame } from '../../../redux/exit/exitSlice';
+import { endGame } from '../../../redux/game/gameSlice';
 
 export default function TargetList() {
   const characters = useSelector((state) => state.characters.value);
@@ -15,6 +17,11 @@ export default function TargetList() {
     const activeCharacters = characters.filter((character) => character.active);
 
     dispatch(setTargetCharacters(activeCharacters));
+
+    if (activeCharacters.length === 0) {
+      dispatch(endGame());
+      dispatch(exitGame());
+    }
   }, [characters]);
 
   const style = {
@@ -22,8 +29,6 @@ export default function TargetList() {
     top: '104px',
     left: '-5px',
     backgroundColor: 'blue',
-    height: '100px',
-    width: '100px',
     margin: '0'
   };
 

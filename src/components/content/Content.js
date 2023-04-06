@@ -7,6 +7,7 @@ import Game from './game/Game';
 export default function Content() {
   const welcome = useSelector((state) => state.welcome.value);
   const game = useSelector((state) => state.game.value);
+  const exit = useSelector((state) => state.exit.value);
 
   const style = {
     position: 'relative'
@@ -17,6 +18,8 @@ export default function Content() {
       {welcome && <PageCover />}
       {welcome && <Popup />}
       {game && <Game />}
+      {exit && <PageCover />}
+      {exit && <Popup />}
     </div>
   );
 }
