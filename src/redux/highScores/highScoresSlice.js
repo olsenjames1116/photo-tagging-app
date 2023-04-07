@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const highScoresSlice = createSlice({
   name: 'highScores',
   initialState: {
-    value: []
+    value: {}
   },
   reducers: {
     setHighScores: (state, action) => {
