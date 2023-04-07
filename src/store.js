@@ -6,6 +6,7 @@ import imageClickedReducer from './redux/imageClicked/imageClickedSlice';
 import targetCoordinatesReducer from './redux/targetCoordinates/targetCoordinatesSlice';
 import targetCharactersReducer from './redux/targetCharacters/targetCharactersSlice';
 import exitReducer from './redux/exit/exitSlice';
+import highScoresReducer from './redux/highScores/highScoresSlice';
 
 export default configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export default configureStore({
     imageClicked: imageClickedReducer,
     targetCoordinates: targetCoordinatesReducer,
     targetCharacters: targetCharactersReducer,
-    exit: exitReducer
+    exit: exitReducer,
+    highScores: highScoresReducer
   }
 });
