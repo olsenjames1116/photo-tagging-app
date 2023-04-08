@@ -7,7 +7,12 @@ export default function PlayerTime() {
   return (
     <div className="playerTime">
       <h2>Your Time:</h2>
-      <p>{stopwatch}</p>
+      <div className="time">
+        <span className="minutes">
+          {('0' + Math.floor((stopwatch / 60000) % 60)).slice(-2) + ':'}
+        </span>
+        <span className="seconds">{('0' + Math.floor((stopwatch / 1000) % 60)).slice(-2)}</span>
+      </div>
     </div>
   );
 }
