@@ -16,8 +16,6 @@ export default function Game() {
     const x = Math.round(clientX - left);
     const y = Math.round(clientY - top);
 
-    console.log(`x: ${x} y: ${y}`);
-
     return { x, y };
   }
 

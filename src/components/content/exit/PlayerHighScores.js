@@ -1,25 +1,40 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { setHighScores } from '../../../redux/highScores/highScoresSlice';
 import { useSelector, useDispatch } from 'react-redux';
-import uniqid from 'uniqid';
+import Score from './Score';
 
 export default function PlayerHighScores() {
   const highScores = useSelector((state) => state.highScores.value);
   const dispatch = useDispatch();
 
+  const loadScores = useRef(true);
+
   useEffect(() => {
     async function fetchData() {
       const collectionRef = collection(db, 'highScores');
       const collectionSnap = await getDocs(collectionRef);
-      collectionSnap.forEach((document) =>
-        console.log(document.data()['name'], document.data()['time'])
-      );
+      collectionSnap.forEach((document) => {
+        dispatch(setHighScores([document.id, document.data()]));
+      });
     }
 
-    fetchData();
+    if (loadScores.current) {
+      loadScores.current = false;
+      fetchData();
+    }
   }, []);
 
-  return <ol className="playerHighScores">{}</ol>;
+  useEffect(() => {
+    console.table(highScores);
+  }, [highScores]);
+
+  return (
+    <ol className="playerHighScores">
+      {highScores.map((highScore) => (
+        <Score key={highScore.id} highScore={highScore} />
+      ))}
+    </ol>
+  );
 }
