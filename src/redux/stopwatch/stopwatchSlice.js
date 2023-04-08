@@ -7,7 +7,7 @@ export const stopwatchSlice = createSlice({
   },
   reducers: {
     incrementWatch: (state) => {
-      state.value = state.value + 1;
+      state.value = state.value + 1000;
     }
   }
 });

@@ -12,5 +12,16 @@ export default function Stopwatch() {
     return () => clearInterval(intervalId);
   }, []);
 
-  return <div className="stopWatch">{stopwatch}</div>;
+  useEffect(() => {
+    console.log(stopwatch, '0' + ((stopwatch / 1000) % 60));
+  }, [stopwatch]);
+
+  return (
+    <div className="stopWatch">
+      <span className="minutes">
+        {('0' + Math.floor((stopwatch / 60000) % 60)).slice(-2) + ':'}
+      </span>
+      <span className="seconds">{('0' + Math.floor((stopwatch / 1000) % 60)).slice(-2)}</span>
+    </div>
+  );
 }
