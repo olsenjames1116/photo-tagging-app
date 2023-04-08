@@ -7,6 +7,7 @@ import targetCoordinatesReducer from './redux/targetCoordinates/targetCoordinate
 import targetCharactersReducer from './redux/targetCharacters/targetCharactersSlice';
 import exitReducer from './redux/exit/exitSlice';
 import highScoresReducer from './redux/highScores/highScoresSlice';
+import stopwatchReducer from './redux/stopwatch/stopwatchSlice';
 
 export default configureStore({
   reducer: {
@@ -17,6 +18,7 @@ export default configureStore({
     targetCoordinates: targetCoordinatesReducer,
     targetCharacters: targetCharactersReducer,
     exit: exitReducer,
-    highScores: highScoresReducer
+    highScores: highScoresReducer,
+    stopwatch: stopwatchReducer
   }
 });

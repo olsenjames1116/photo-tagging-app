@@ -3,10 +3,12 @@ import Title from './Title';
 import { useSelector, useDispatch } from 'react-redux';
 import Targets from '../content/welcome/Targets';
 import { clickOffImage } from '../../redux/imageClicked/imageClickedSlice';
+import Stopwatch from './Stopwatch';
 
 export default function Header() {
   const welcome = useSelector((state) => state.welcome.value);
   const game = useSelector((state) => state.game.value);
+  const exit = useSelector((state) => state.exit.value);
 
   const dispatch = useDispatch();
 
@@ -14,6 +16,8 @@ export default function Header() {
     <div onClick={() => dispatch(clickOffImage())} className="header">
       {welcome && <Title />}
       {game && <Targets />}
+      {game && <Stopwatch />}
+      {exit && <Title />}
     </div>
   );
 }
