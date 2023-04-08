@@ -27,10 +27,6 @@ export default function PlayerHighScores() {
     }
   }, []);
 
-  useEffect(() => {
-    console.table(highScores);
-  }, [highScores]);
-
   return (
     <ol className="playerHighScores">
       {highScores.map((highScore) => (
