@@ -14,14 +14,22 @@ export default function PlayerForm() {
     });
   }
 
+  function confirmationMessage(form) {
+    form.style.display = 'none';
+    const confirmation = document.createElement('span');
+    confirmation.textContent = 'Your score has been saved!';
+    const scores = document.querySelector('div.scores');
+    scores.insertBefore(confirmation, document.querySelector('div.highScores'));
+  }
+
   function displayErrorMessage(nameInput) {
     console.log('invalid submission');
 
-    if (nameInput.validity.valueMissing) {
-      nameInput.setCustomValidity('Please enter a name');
+    if (nameInput?.validity.valueMissing) {
+      nameInput?.setCustomValidity('Please enter a name');
     }
 
-    nameInput.reportValidity();
+    nameInput?.reportValidity();
   }
 
   function checkValidity(event) {
@@ -33,13 +41,14 @@ export default function PlayerForm() {
       const playerName = nameInput.value;
       console.log(playerName, stopwatch);
       // writeDocument(playerName);
+      confirmationMessage(form);
     } else {
       displayErrorMessage(nameInput);
     }
   }
 
   function resetValidity() {
-    nameInput.setCustomValidity('');
+    nameInput?.setCustomValidity('');
   }
 
   return (
