@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { collection, getDocs } from 'firebase/firestore';
+import { collection, getDocs, limit, orderBy, query } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { setHighScores } from '../../../redux/highScores/highScoresSlice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -14,7 +14,8 @@ export default function PlayerHighScores() {
   useEffect(() => {
     async function fetchData() {
       const collectionRef = collection(db, 'highScores');
-      const collectionSnap = await getDocs(collectionRef);
+      const collectionQuery = query(collectionRef, orderBy('time'), limit(10));
+      const collectionSnap = await getDocs(collectionQuery);
       collectionSnap.forEach((document) => {
         dispatch(setHighScores([document.id, document.data()]));
       });
