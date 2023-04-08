@@ -1,7 +1,7 @@
 import React from 'react';
 import Title from './Title';
 import { useSelector, useDispatch } from 'react-redux';
-import Targets from '../content/welcome/Targets';
+import Targets from '../content/Targets';
 import { clickOffImage } from '../../redux/imageClicked/imageClickedSlice';
 import Stopwatch from './Stopwatch';
 

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { useSelector } from 'react-redux';
 
 export default function PlayerForm() {
   const stopwatch = useSelector((state) => state.stopwatch.value);
-  const nameInput = document.querySelector('input#playerName');
 
   async function writeDocument(playerName) {
     const docRef = await addDoc(collection(db, 'highScores'), {
@@ -22,20 +21,21 @@ export default function PlayerForm() {
     scores.insertBefore(confirmation, document.querySelector('div.highScores'));
   }
 
-  function displayErrorMessage(nameInput) {
+  function displayErrorMessage() {
     console.log('invalid submission');
+    const nameInput = document.querySelector('input#playerName');
 
-    if (nameInput?.validity.valueMissing) {
-      nameInput?.setCustomValidity('Please enter a name');
+    if (nameInput.validity.valueMissing) {
+      nameInput.setCustomValidity('Please enter a name');
+      nameInput.reportValidity();
     }
-
-    nameInput?.reportValidity();
   }
 
   function checkValidity(event) {
     event.preventDefault();
 
     const form = document.querySelector('form');
+    const nameInput = document.querySelector('input#playerName');
 
     if (form.checkValidity()) {
       const playerName = nameInput.value;
@@ -43,12 +43,13 @@ export default function PlayerForm() {
       // writeDocument(playerName);
       confirmationMessage(form);
     } else {
-      displayErrorMessage(nameInput);
+      displayErrorMessage();
     }
   }
 
   function resetValidity() {
-    nameInput?.setCustomValidity('');
+    const nameInput = document.querySelector('input#playerName');
+    nameInput.setCustomValidity('');
   }
 
   return (

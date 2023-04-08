@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import Character from '../Character';
+import Character from './Character';
 
 export default function Targets() {
   const characters = useSelector((state) => state.characters.value);

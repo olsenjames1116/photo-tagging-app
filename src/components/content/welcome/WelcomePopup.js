@@ -1,6 +1,6 @@
 import React from 'react';
 import Directions from './Directions';
-import Targets from './Targets';
+import Targets from '../Targets';
 import StartButton from './StartButton';
 
 export default function WelcomePopup() {
