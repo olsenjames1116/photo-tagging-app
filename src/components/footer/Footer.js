@@ -3,6 +3,7 @@ import Author from './Author';
 import Sources from './Sources';
 import { clickOffImage } from '../../redux/imageClicked/imageClickedSlice';
 import { useDispatch } from 'react-redux';
+import '../../styles/footer/Footer.css';
 
 export default function Footer() {
   const dispatch = useDispatch();

@@ -1,0 +1,42 @@
+div.welcomePopup {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.welcomePopup > p.directions {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0;
+}
+
+div.welcomePopup > ul.targets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+div.welcomePopup > ul.targets > li {
+  display: flex;
+  align-items: center;
+}
+
+div.welcomePopup > ul.targets > li > img {
+  width: 110px;
+  height: 100px;
+}
+
+div.welcomePopup > ul.targets > li > span {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+}
+
+div.welcomePopup > button {
+  width: 50%;
+  height: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1rem;
+}

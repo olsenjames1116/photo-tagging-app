@@ -1,0 +1,10 @@
+div.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+}
+
+div.footer > p {
+  margin: 0;
+}

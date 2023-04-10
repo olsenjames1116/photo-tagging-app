@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import Targets from '../content/Targets';
 import { clickOffImage } from '../../redux/imageClicked/imageClickedSlice';
 import Stopwatch from './Stopwatch';
+import '../../styles/header/Header.css';
 
 export default function Header() {
   const welcome = useSelector((state) => state.welcome.value);

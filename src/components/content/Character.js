@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 export default function Character({ character }) {
   const style = {
-    height: '100px',
-    width: 'auto'
+    // height: '100px',
+    // width: 'auto'
   };
 
   return (
