@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'blackOps';
+  src: url('../fonts/blackopsone-regular-webfont.woff2') format('woff2'),
+    url('../fonts/blackopsone-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --mainTheme: rgb(226, 54, 54);
   --secondaryTheme: white;
@@ -13,6 +21,11 @@ div.app {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: 'blackOps', sans-serif;
+}
+
+button {
+  font-family: 'blackOps', sans-serif;
 }
 
 div.content {

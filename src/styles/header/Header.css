@@ -6,6 +6,11 @@ div.header {
   color: var(--secondaryTheme);
 }
 
+div.header > h1 {
+  padding: 5px;
+  border: 5px solid var(--secondaryTheme);
+}
+
 div.header > ul.targets {
   width: 100vw;
   list-style-type: none;
