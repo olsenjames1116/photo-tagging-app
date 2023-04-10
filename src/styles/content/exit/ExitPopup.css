@@ -1,0 +1,90 @@
+div.exitPopup {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.scores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.playerTime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+div.playerTime > h2 {
+  margin: 0;
+}
+
+div.playerTime > div.time {
+  font-size: 2rem;
+}
+
+form {
+  display: grid;
+  row-gap: 5px;
+}
+
+label {
+  grid-area: 1 / 1 / 2 / 2;
+  font-size: 1.3rem;
+  text-align: center;
+  align-self: center;
+}
+
+input {
+  grid-area: 1 / 2 / 2 / 3;
+  font-size: 1.1rem;
+}
+
+input:invalid {
+  background-color: rgb(243, 121, 121);
+}
+
+form > button {
+  grid-area: 2 / 1 / 3 / 3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 1.5rem;
+  font-size: 1rem;
+}
+
+div.highScores {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.highScores > h2 {
+  margin: 0;
+  text-align: center;
+}
+
+ol.playerHighScores {
+  margin: 0;
+}
+
+ol.playerHighScores > li {
+  width: 100%;
+  font-size: 1.3rem;
+}
+
+ol.playerHighScores > li > div.time {
+  display: inline;
+  float: right;
+}
+
+div.exitPopup > button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  height: 1.5rem;
+  font-size: 1rem;
+}

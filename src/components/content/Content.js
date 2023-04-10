@@ -9,10 +9,6 @@ export default function Content() {
   const game = useSelector((state) => state.game.value);
   const exit = useSelector((state) => state.exit.value);
 
-  // const style = {
-  //   position: 'relative'
-  // };
-
   return (
     <div className="content">
       {welcome && <PageCover />}
