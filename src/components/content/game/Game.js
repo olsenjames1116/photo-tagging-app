@@ -4,10 +4,10 @@ import TargetBox from './TargetBox';
 import { useSelector, useDispatch } from 'react-redux';
 import { clickOnImage } from '../../../redux/imageClicked/imageClickedSlice';
 import { setX, setY } from '../../../redux/targetCoordinates/targetCoordinatesSlice';
-import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../../../firebase';
+import '../../../styles/content/game/Game.css';
 
 export default function Game() {
+  const imageClicked = useSelector((state) => state.imageClicked.value);
   const dispatch = useDispatch();
 
   function getCoordinates(event) {
@@ -28,16 +28,9 @@ export default function Game() {
     dispatch(clickOnImage());
   }
 
-  const imgStyle = {
-    width: '1000px'
-  };
-
-  const imageClicked = useSelector((state) => state.imageClicked.value);
-
   return (
     <div className="game">
       <img
-        style={imgStyle}
         src={Wimmelbilder}
         alt="A detailed image with various Marvel characters"
         onClick={(event) => clickImage(event)}

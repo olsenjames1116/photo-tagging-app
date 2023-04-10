@@ -7,14 +7,8 @@ export default function TargetBox() {
   const { x, y } = useSelector((state) => state.targetCoordinates);
 
   const style = {
-    position: 'absolute',
-    zIndex: '100',
     top: `${y - 50}px`,
-    left: `${x - 50}px`,
-    width: '100px',
-    height: '100px',
-    border: '5px solid black',
-    color: 'white'
+    left: `${x - 50}px`
   };
 
   return (

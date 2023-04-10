@@ -1,4 +1,37 @@
 div.header {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.header > ul.targets {
+  width: 100vw;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.header > ul.targets > li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+div.header > ul.targets > li > img {
+  width: 110px;
+  height: 100px;
+}
+
+div.header > ul.targets > li > span {
+  font-size: 1.5rem;
+}
+
+div.header > div.stopWatch > span {
+  font-size: 3rem;
+}
+
+div.header > div.stopWatch {
+  margin-bottom: 10px;
 }

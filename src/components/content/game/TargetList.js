@@ -6,6 +6,7 @@ import { db } from '../../../firebase';
 import { foundCharacter } from '../../../redux/characters/charactersSlice';
 import { exitGame } from '../../../redux/exit/exitSlice';
 import { endGame } from '../../../redux/game/gameSlice';
+import '../../../styles/content/game/Game.css';
 
 export default function TargetList() {
   const characters = useSelector((state) => state.characters.value);
@@ -23,14 +24,6 @@ export default function TargetList() {
       dispatch(exitGame());
     }
   }, [characters]);
-
-  const style = {
-    position: 'absolute',
-    top: '104px',
-    left: '-5px',
-    backgroundColor: 'blue',
-    margin: '0'
-  };
 
   async function validateCoordinates(characterName) {
     const docRef = doc(db, 'characterCoordinates', 'V6xqpoYXALe8KRYZaHTw');
@@ -59,7 +52,7 @@ export default function TargetList() {
   }
 
   return (
-    <ul style={style} className="targetList">
+    <ul className="targetList">
       {targetCharacters.map((target) => (
         <li key={target.id} onClick={(event) => checkImage(event)}>
           {target.name}
