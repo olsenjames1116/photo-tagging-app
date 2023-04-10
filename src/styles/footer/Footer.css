@@ -10,3 +10,12 @@ div.footer {
 div.footer > p {
   margin: 0;
 }
+
+div.footer > p > a {
+  text-decoration: none;
+  color: var(--accents);
+}
+
+div.footer > p > a:hover {
+  color: var(--hoverColor);
+}
