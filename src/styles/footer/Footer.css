@@ -3,6 +3,8 @@ div.footer {
   flex-direction: column;
   padding: 10px;
   align-items: center;
+  background-color: var(--mainTheme);
+  color: var(--secondaryTheme);
 }
 
 div.footer > p {

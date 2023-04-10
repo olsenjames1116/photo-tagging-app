@@ -3,6 +3,8 @@ div.exitPopup {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: var(--mainTheme);
+  color: var(--secondaryTheme);
 }
 
 div.scores {
@@ -28,7 +30,7 @@ div.playerTime > div.time {
 
 form {
   display: grid;
-  row-gap: 5px;
+  row-gap: 10px;
 }
 
 label {
@@ -54,6 +56,17 @@ form > button {
   width: 50%;
   height: 1.5rem;
   font-size: 1rem;
+  border: 0;
+  background-color: var(--accents);
+  color: var(--secondaryTheme);
+}
+
+form > button:hover {
+  background-color: var(--hoverColor);
+}
+
+div.scores > span.confirmation {
+  text-align: center;
 }
 
 div.highScores {
@@ -87,4 +100,11 @@ div.exitPopup > button {
   width: 50%;
   height: 1.5rem;
   font-size: 1rem;
+  border: 0;
+  background-color: var(--accents);
+  color: var(--secondaryTheme);
+}
+
+div.exitPopup > button:hover {
+  background-color: var(--hoverColor);
 }

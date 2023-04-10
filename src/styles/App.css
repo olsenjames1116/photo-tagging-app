@@ -1,5 +1,8 @@
-* {
-  outline: 1px solid black;
+:root {
+  --mainTheme: rgb(226, 54, 54);
+  --secondaryTheme: white;
+  --accents: black;
+  --hoverColor: rgb(80, 74, 74);
 }
 
 body {
@@ -14,4 +17,5 @@ div.app {
 
 div.content {
   flex: 1;
+  background-color: var(--hoverColor);
 }

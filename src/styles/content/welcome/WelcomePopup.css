@@ -3,6 +3,8 @@ div.welcomePopup {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  background-color: var(--mainTheme);
+  color: var(--secondaryTheme);
 }
 
 div.welcomePopup > p.directions {
@@ -39,4 +41,11 @@ div.welcomePopup > button {
   margin-left: auto;
   margin-right: auto;
   font-size: 1rem;
+  border: 0;
+  background-color: var(--accents);
+  color: var(--secondaryTheme);
+}
+
+div.welcomePopup > button:hover {
+  background-color: var(--hoverColor);
 }

@@ -16,6 +16,7 @@ export default function PlayerForm() {
   function confirmationMessage(form) {
     form.style.display = 'none';
     const confirmation = document.createElement('span');
+    confirmation.classList.add('confirmation');
     confirmation.textContent = 'Your score has been saved!';
     const scores = document.querySelector('div.scores');
     scores.insertBefore(confirmation, document.querySelector('div.highScores'));
