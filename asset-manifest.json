@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/photo-tagging-app/static/css/main.8792b71e.css",
+    "main.js": "/photo-tagging-app/static/js/main.ee51164a.js",
+    "static/media/rocket.png": "/photo-tagging-app/static/media/rocket.6ee661f764d373dd4f9d.png",
+    "static/media/wimmelbilder.jpg": "/photo-tagging-app/static/media/wimmelbilder.bf275d63c8b3379b89b7.jpg",
+    "static/media/deadpool.png": "/photo-tagging-app/static/media/deadpool.94328a44653930e5c622.png",
+    "static/media/kang.png": "/photo-tagging-app/static/media/kang.f0dcd89a38c131526a13.png",
+    "static/media/blackopsone-regular-webfont.woff": "/photo-tagging-app/static/media/blackopsone-regular-webfont.ef8ab1d541c15018e3d6.woff",
+    "static/media/blackopsone-regular-webfont.woff2": "/photo-tagging-app/static/media/blackopsone-regular-webfont.0caa5b2cff9e3eeee95e.woff2",
+    "index.html": "/photo-tagging-app/index.html",
+    "main.8792b71e.css.map": "/photo-tagging-app/static/css/main.8792b71e.css.map",
+    "main.ee51164a.js.map": "/photo-tagging-app/static/js/main.ee51164a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8792b71e.css",
+    "static/js/main.ee51164a.js"
+  ]
+}
