@@ -5,6 +5,7 @@ import { clickOffImage } from '../../redux/imageClicked/imageClickedSlice';
 import { useDispatch } from 'react-redux';
 import '../../styles/footer/Footer.css';
 
+// Represents the footer on the bottom of the screen
 export default function Footer() {
   const dispatch = useDispatch();
 

@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import Character from './Character';
 
+// Represents the target characters that the user is to look for
 export default function Targets() {
   const characters = useSelector((state) => state.characters.value);
 

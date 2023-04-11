@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Represents the author credit in the footer
 export default function Author() {
   return (
     <p className="author">

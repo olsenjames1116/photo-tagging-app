@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import Popup from './Popup';
 import Game from './game/Game';
 
+// Represents the main body of the app. Acts as a router to direct the user based on what phase the user is on
 export default function Content() {
   const welcome = useSelector((state) => state.welcome.value);
   const game = useSelector((state) => state.game.value);

@@ -1,16 +1,6 @@
 import React from 'react';
 
+// Represents that page cover that prevents user interaction when a popup is present
 export default function PageCover() {
-  const style = {
-    display: 'block',
-    position: 'fixed',
-    zIndex: '10',
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
-    width: '100vw',
-    height: '100vh',
-    top: '0',
-    left: '0'
-  };
-
-  return <div className="cover" style={style}></div>;
+  return <div className="cover"></div>;
 }

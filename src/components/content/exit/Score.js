@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+// Displays the top high scores formatted to appear as a stopwatch
 export default function Score({ highScore }) {
   return (
     <li key={highScore.id}>

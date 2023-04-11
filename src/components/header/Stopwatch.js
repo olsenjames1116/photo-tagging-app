@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { incrementWatch } from '../../redux/stopwatch/stopwatchSlice';
 
+// Represents the stopwatch that tracks the user's time during the game
 export default function Stopwatch() {
   const stopwatch = useSelector((state) => state.stopwatch.value);
   const dispatch = useDispatch();
 
+  // Starts the timer when the component mounts and increments the watch every second
   useEffect(() => {
     const intervalId = setInterval(() => dispatch(incrementWatch()), 1000);
 

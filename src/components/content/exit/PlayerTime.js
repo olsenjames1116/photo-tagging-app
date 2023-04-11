@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+// Displays the player's score formatted to have a stopwatch appearance
 export default function PlayerTime() {
   const stopwatch = useSelector((state) => state.stopwatch.value);
 

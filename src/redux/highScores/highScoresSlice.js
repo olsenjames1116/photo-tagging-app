@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Represents the stored high scores to be displayed on the exit screen
 export const highScoresSlice = createSlice({
   name: 'highScores',
   initialState: {
@@ -7,6 +8,7 @@ export const highScoresSlice = createSlice({
   },
   reducers: {
     setHighScores: (state, action) => {
+      // Sets the high score state when the high scores have been retrieved from firestore
       state.value = [
         ...state.value,
         {

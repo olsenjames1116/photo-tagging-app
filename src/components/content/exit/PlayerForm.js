@@ -1,11 +1,13 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { addDoc, collection } from 'firebase/firestore';
 import { db } from '../../../firebase';
 import { useSelector } from 'react-redux';
 
+// Represents the form that appears in the final page for the user to record their score
 export default function PlayerForm() {
   const stopwatch = useSelector((state) => state.stopwatch.value);
 
+  // Writes the player's score to firestore
   async function writeDocument(playerName) {
     const docRef = await addDoc(collection(db, 'highScores'), {
       name: playerName,
@@ -13,6 +15,7 @@ export default function PlayerForm() {
     });
   }
 
+  // Displays a confirmation message after the user's information has been stored
   function confirmationMessage(form) {
     form.style.display = 'none';
     const confirmation = document.createElement('span');
@@ -22,6 +25,7 @@ export default function PlayerForm() {
     scores.insertBefore(confirmation, document.querySelector('div.highScores'));
   }
 
+  // Displays an error message when an invalid input has been used
   function displayErrorMessage() {
     console.log('invalid submission');
     const nameInput = document.querySelector('input#playerName');
@@ -32,6 +36,7 @@ export default function PlayerForm() {
     }
   }
 
+  // Checks the validity of the input field when submitted
   function checkValidity(event) {
     event.preventDefault();
 
@@ -40,14 +45,14 @@ export default function PlayerForm() {
 
     if (form.checkValidity()) {
       const playerName = nameInput.value;
-      console.log(playerName, stopwatch);
-      // writeDocument(playerName);
+      writeDocument(playerName);
       confirmationMessage(form);
     } else {
       displayErrorMessage();
     }
   }
 
+  // Resets validity when the user changes the input field
   function resetValidity() {
     const nameInput = document.querySelector('input#playerName');
     nameInput.setCustomValidity('');

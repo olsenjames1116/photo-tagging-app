@@ -1,13 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit';
-import welcomeReducer from './redux/welcome/welcomeSlice';
-import charactersReducer from './redux/characters/charactersSlice';
-import gameReducer from './redux/game/gameSlice';
-import imageClickedReducer from './redux/imageClicked/imageClickedSlice';
-import targetCoordinatesReducer from './redux/targetCoordinates/targetCoordinatesSlice';
-import targetCharactersReducer from './redux/targetCharacters/targetCharactersSlice';
-import exitReducer from './redux/exit/exitSlice';
-import highScoresReducer from './redux/highScores/highScoresSlice';
-import stopwatchReducer from './redux/stopwatch/stopwatchSlice';
+import {
+  welcomeReducer,
+  charactersReducer,
+  gameReducer,
+  imageClickedReducer,
+  targetCoordinatesReducer,
+  targetCharactersReducer,
+  exitReducer,
+  highScoresReducer,
+  stopwatchReducer
+} from './redux/index';
 
 export default configureStore({
   reducer: {
